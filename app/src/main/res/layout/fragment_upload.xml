@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Görsel Kartı -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#CCCCCC">
+
+            <ImageView
+                android:id="@+id/selectedImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                 />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Galeriden Resim Seç Butonu -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/selectImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Galeriden Resim Seç"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            app:icon="@drawable/ic_gallery"
+            app:iconTint="@android:color/white"
+            app:iconGravity="textStart"
+            app:backgroundTint="@color/ana_yesil"
+            android:textColor="@android:color/white"
+            android:paddingVertical="12dp" />
+
+
+
+
+        <!-- Analiz Et Butonu -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/analyzeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Analiz Et"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp"
+            app:icon="@drawable/ic_analiz"
+            app:iconTint="@android:color/white"
+            app:iconGravity="textStart"
+            app:backgroundTint="@color/ana_yesil"
+            android:textColor="@android:color/white"
+            android:paddingVertical="12dp" />
+
+        <!-- Sonuç Metni -->
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Analiz sonucu burada görünecek"
+            android:textSize="14sp"
+            android:textColor="#444444"
+            android:layout_marginTop="24dp"
+            android:gravity="center" />
+    </LinearLayout>
+</ScrollView>

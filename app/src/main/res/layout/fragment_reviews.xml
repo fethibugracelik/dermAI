@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Uygulamayı nasıl değerlendirirsiniz?"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:isIndicator="false"
+        android:layout_marginVertical="8dp"
+        android:scaleX="1"
+        android:scaleY="1" />
+
+
+
+
+    <EditText
+        android:id="@+id/commentEditText"
+        android:hint="Yorumunuzu yazın..."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="3"
+        android:background="@drawable/rounded_edittext_bg"
+        android:padding="12dp"
+        android:gravity="top|start"
+        android:inputType="textMultiLine" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submitCommentButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gönder"
+        app:backgroundTint="@color/ana_yesil"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:text="Diğer kullanıcı yorumları"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="12dp" />
+
+
+</LinearLayout>

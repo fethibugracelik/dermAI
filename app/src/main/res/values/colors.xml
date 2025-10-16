@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ana_yesil">#4CAF50</color>
+    <color name="green_dark">#2E7D32</color>
+    <color name="your_primary_color">#1976D2</color>
+    <color name="your_onPrimary_color">#FFFFFF</color>
+    <color name="your_background_color">#FFFFFF</color>
+    <color name="your_onBackground_color">#000000</color>
+    <color name="your_surface_color">#FFFFFF</color>
+    <color name="your_onSurface_color">#000000</color>
+    <color name="gray_text">#444444</color>
+    <color name="popup_text_light">#444444</color>
+    <color name="popup_text">#444444</color> <!-- Gri ton -->
+
+
+</resources>

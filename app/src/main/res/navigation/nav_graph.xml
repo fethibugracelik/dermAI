@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/startFragment">
+
+    <!-- Başlangıç -->
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.dermai.StartFragment"
+        android:label="Başlangıç"
+        tools:layout="@layout/fragment_start" />
+
+    <!-- Giriş Yap -->
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.dermai.SignInFragment"
+        android:label="Giriş Yap"
+        tools:layout="@layout/fragment_signin">
+        <action
+            android:id="@+id/action_signInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <!-- Kayıt Ol -->
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.dermai.RegisterFragment"
+        android:label="Kayıt Ol"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Ana Sayfa -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.dermai.HomeFragment"
+        android:label="Ana Sayfa"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_uploadFragment"
+            app:destination="@id/uploadFragment" />
+    </fragment>
+
+    <!-- Görsel Yükle -->
+    <fragment
+        android:id="@+id/uploadFragment"
+        android:name="com.example.dermai.UploadFragment"
+        android:label="Yükle"
+        tools:layout="@layout/fragment_upload">
+        <action
+            android:id="@+id/action_uploadFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <!-- Sonuç -->
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.dermai.ResultFragment"
+        android:label="Sonuç"
+        tools:layout="@layout/fragment_result" />
+
+    <!-- Geçmiş -->
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.dermai.HistoryFragment"
+        android:label="Geçmiş"
+        tools:layout="@layout/fragment_history" />
+
+    <!-- Profil -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.dermai.ProfileFragment"
+        android:label="Profilim"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Şifre Değiştir -->
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.dermai.ChangePasswordFragment"
+        android:label="Şifre Değiştir"
+        tools:layout="@layout/fragment_change_password" />
+</navigation>
